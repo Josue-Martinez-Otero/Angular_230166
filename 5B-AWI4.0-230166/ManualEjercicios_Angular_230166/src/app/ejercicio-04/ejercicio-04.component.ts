@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common'; // 👈 Importar CommonModule
 
 @Component({
   selector: 'app-ejercicio-04',
-  imports: [],
+  standalone: true,  // Si usas Angular Standalone Components
+  imports: [CommonModule], // 👈 Agregar CommonModule
   templateUrl: './ejercicio-04.component.html',
-  styleUrl: './ejercicio-04.component.css'
+  styleUrls: ['./ejercicio-04.component.css'] // 👈 styleUrls con "s"
 })
 export class Ejercicio04Component {
-    isLoggedIn = true;
-    isServerRuning = true;
+  isLoggedIn = true;
+  isServerRunning = true; // 👈 Corregido el nombre de la variable
 }
