@@ -1,0 +1,19 @@
+<div *ngIf="ejercicio" class="p-4">
+  <h2 class="text-xl font-bold mb-2">{{ ejercicio }}</h2>
+  
+  <ng-container [ngSwitch]="ejercicio">
+    <app-ejercicio-01 *ngSwitchCase="'Ejercicio 1'"></app-ejercicio-01>
+    <app-ejercicio-02 *ngSwitchCase="'Ejercicio 2'"></app-ejercicio-02>
+    <app-ejercicio-03 *ngSwitchCase="'Ejercicio 3'"></app-ejercicio-03>
+    <app-ejercicio-04 *ngSwitchCase="'Ejercicio 4'"></app-ejercicio-04>
+    <app-ejercicio-05 *ngSwitchCase="'Ejercicio 5'"></app-ejercicio-05>
+    <app-ejercicio-06 *ngSwitchCase="'Ejercicio 6'"></app-ejercicio-06>
+    <app-ejercicio-07 *ngSwitchCase="'Ejercicio 7'"></app-ejercicio-07>
+    <app-ejercicio-08 *ngSwitchCase="'Ejercicio 8'"></app-ejercicio-08>
+    <app-ejercicio-09 *ngSwitchCase="'Ejercicio 9'"></app-ejercicio-09>
+    <app-ejercicio-10 *ngSwitchCase="'Ejercicio 10'"></app-ejercicio-10>
+    <app-ejercicio-11 *ngSwitchCase="'Ejercicio 11'"></app-ejercicio-11>
+    <app-ejercicio-12 *ngSwitchCase="'Ejercicio 12'"></app-ejercicio-12>
+    <p *ngSwitchDefault>Contenido no disponible.</p>
+  </ng-container>
+</div>

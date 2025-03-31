@@ -1,0 +1,15 @@
+<!-- breadcrumb.component.html -->
+<nav  *ngIf="ejercicios.length > 0; else sinEjercicios">
+    <ul class="flex space-x-4">
+      <li *ngFor="let ejercicio of ejercicios">
+        <button (click)="seleccionar(ejercicio)" >
+          {{ ejercicio }}
+        </button>
+      </li>
+    </ul>
+  </nav>
+  
+  <ng-template #sinEjercicios>
+    <p class="text-gray-500">No hay ejercicios disponibles</p>
+  </ng-template>
+  

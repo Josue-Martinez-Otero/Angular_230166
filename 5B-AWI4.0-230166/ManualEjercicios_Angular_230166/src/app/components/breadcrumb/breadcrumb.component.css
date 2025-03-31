@@ -1,0 +1,26 @@
+/* breadcrumb.component.css */
+button {
+    background-color: #ff7f32; /* Color de fondo naranja */
+    color: white; /* Texto blanco */
+    padding: 4px 10px; /* Reducir el espaciado interno para hacerlo más pequeño */
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+    border: none; /* Sin bordes */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Puntero al pasar sobre el botón */
+    transition: background-color 0.3s, transform 0.3s; /* Transición suave para el hover */
+  }
+  
+  button:hover {
+    background-color: #ff9a3d; /* Un naranja más claro para el hover */
+    transform: translateY(-2px); /* Efecto de elevación */
+  }
+  
+  button:focus {
+    outline: none; /* Eliminar el borde de enfoque */
+  }
+  
+  button:active {
+    background-color: #ff5f00; /* Un naranja aún más oscuro cuando se presiona */
+    transform: translateY(1px); /* Efecto de presión */
+  }
+  

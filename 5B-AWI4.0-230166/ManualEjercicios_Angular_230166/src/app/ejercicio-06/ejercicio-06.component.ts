@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './ejercicio-06.component.css'
 })
 export class Ejercicio06Component {
-  isEditable = true;
+  isEditable = false;
 }

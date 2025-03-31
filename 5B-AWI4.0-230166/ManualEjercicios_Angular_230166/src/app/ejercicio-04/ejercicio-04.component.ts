@@ -10,5 +10,5 @@ import { CommonModule } from '@angular/common'; // 👈 Importar CommonModule
 })
 export class Ejercicio04Component {
   isLoggedIn = true;
-  isServerRunning = true; // 👈 Corregido el nombre de la variable
-}
+  isServerRunning = false ; // 👈 Corregido el nombre de la variable
+} 

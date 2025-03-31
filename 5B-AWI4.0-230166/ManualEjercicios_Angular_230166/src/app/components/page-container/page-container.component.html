@@ -1,0 +1,35 @@
+<app-toolbar 
+  (ejerciciosEvent)="onEjerciciosSelected($event)" 
+  (tareasEvent)="onTareasClick()">
+</app-toolbar>
+
+<div class="flex">
+  <app-sidebar></app-sidebar>
+  
+  <div class="flex-1 p-4">
+    <app-breadcrumb [ejercicios]="ejercicios" (ejercicioSeleccionado)="seleccionarEjercicio($event)"></app-breadcrumb>
+    
+    <!-- Mostrar tareas -->
+    <div *ngIf="mostrarTareas">
+      <header class="bg-blue-600 text-white p-4 flex justify-between">
+        <h1 class="text-xl">Manual Tareas</h1>
+        <button mat-button (click)="onTareasClick()">Tareas</button>
+      </header>
+      <!-- Contenido de las tareas aquí -->
+    </div>
+
+    <!-- Mostrar ejercicios -->
+    <div *ngIf="mostrarEjercicios">
+      <header class="bg-blue-600 text-white p-4 flex justify-between">
+        <h1 class="text-xl">Manual Ejercicios</h1>
+        <button mat-button (click)="onEjerciciosClick()">Ejercicios</button>
+      </header>
+      <!-- Contenido de los ejercicios aquí -->
+    </div>
+    
+    <!-- Mostrar contenido dependiendo del ejercicio seleccionado -->
+    <app-content *ngIf="!mostrarTareas && !mostrarEjercicios" [ejercicio]="ejercicioSeleccionado"></app-content>
+  </div>
+</div>
+
+<app-footer></app-footer>
